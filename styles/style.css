@@ -21,6 +21,30 @@ hr{
     border: 1px solid #D1D1D1;
 }
 
+/* navbar edit */
+nav{
+    background-color: #562EFF;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+}
+nav>.nav-icon,ul{
+    display: flex;
+    align-items: center;
+}
+.nav-icon>img{
+    height:50px ;
+    width: 40px;
+    margin: 0 20px;
+}
+nav ul>li{
+    list-style-type: none;
+    margin: 0 20px;
+}
+nav ul>li>a{
+    text-decoration: none;
+    color: #ffffff;
+}
 
 /*-------------
  top players start 
@@ -121,7 +145,11 @@ hr{
 /*       -------------------
           media queries-
 ------------- */
+/* mobile devices */
 @media only screen and (max-width:688px) {
+    nav ul>li{
+        margin: 10px;
+    }
     .container{
         width: 100%;
     }
@@ -131,6 +159,16 @@ hr{
     .latest-courses{
         row-gap: 30px;
     }
+}
 
-    
+/* tablet devices */
+
+
+@media only screen and (min-width:689px) and (max-width:970px) {
+    .container{
+        width: 100%;
+    }
+    .top-players, .top-blogs, .latest-courses{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
